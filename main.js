@@ -54,15 +54,42 @@
 //     }
 // }
 
-var a = 100;
+// var a = 100;
+// first();
+// function first() {
+//     console.log('from first func: ' + a);
+//     second();
+// }
+
+// function second() {
+//     console.log('from second func: ' + a);
+//     console.log('hello from second');
+// }
+
+//lexical scoping
+
 first();
+var a = 500;
+
+
 function first() {
-    console.log('from first func: ' + a);
-    second();
+
+    console.log(a);
+    third();
+
 }
 
+
 function second() {
-    console.log('from second func: ' + a);
-    console.log('hello from second');
+
+    console.log(a);
+
+    
+    function third() {
+
+        console.log(a);
+
+    }
+
 }
 
