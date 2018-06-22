@@ -66,30 +66,50 @@
 //     console.log('hello from second');
 // }
 
-//lexical scoping
+// //lexical scoping
 
-first();
-var a = 500;
-
-
-function first() {
-
-    console.log(a);
-    third();
-
-}
+// first();
+// var a = 500;
 
 
-function second() {
+// function first() {
 
-    console.log(a);
+//     console.log(a);
+//     third();
+
+// }
+
+
+// function second() {
+
+//     console.log(a);
 
     
-    function third() {
+//     function third() {
 
-        console.log(a);
+//         console.log(a);
 
-    }
+//     }
 
-}
+// }
+
+
+// //this keywords refers to the object that calls that function
+// //1. this keyword inside a regular function call gets the reference of 
+// //window object no matter where it is called
+
+// var person = {
+//     name: 'Ganesh',
+//     yearOfBirth : 1986,
+//     calculateAge: function() {
+//         console.log(2018 - this.yearOfBirth);
+//         innerFunction();
+//         function innerFunction() {
+//             console.log(this);
+//         }
+
+//     }    
+// };
+
+// person.calculateAge();
 
