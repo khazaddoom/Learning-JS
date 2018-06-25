@@ -1,4 +1,23 @@
 
+var Person = function(name, age) {
+    this.name = name,
+    this.age = age;
+}
+
+console.log(Person);
+
+// Person.sex = 'Male';
+
+// console.log(Person);
+
+var Ganesh = new Person('Ganesh', 31);
+
+Person.sex = 'Male';
+
+console.log(Ganesh);
+console.log(Person.sex);
+
+
 // var Risk = function (insuredName, inceptionYear, quotingCurrency) {
 //     this.insuredName = insuredName,
 //     this.inceptionYear = inceptionYear,
