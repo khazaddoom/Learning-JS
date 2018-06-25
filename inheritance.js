@@ -12,10 +12,16 @@ console.log(Person);
 
 var Ganesh = new Person('Ganesh', 31);
 
-Person.sex = 'Male';
+Person.prototype.salutation = function() {
+    return 'Hello, I am ' + this.name + ' of Age ' + this.age ;
+};
 
-console.log(Ganesh);
-console.log(Person.sex);
+console.log(Ganesh.salutation());
+
+var Reshma = new Person('Reshma', 28);
+
+console.log(Person);
+
 
 
 // var Risk = function (insuredName, inceptionYear, quotingCurrency) {
