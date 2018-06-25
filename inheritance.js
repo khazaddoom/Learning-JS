@@ -62,4 +62,23 @@
 // console.log(suvodipJudwa.yearOfBirth);
 
 
+function findPrimesInRange (x, y) {
 
+    for (let i = x; i <= y; i++) {
+
+        var divisionCount = 0;
+        
+        for (let j = 1; j <=i; j++) {
+
+            if (i % j === 0) {
+                divisionCount++;
+            }
+        }              
+        //console log if prime
+        (divisionCount <= 2)? console.log(i) : console.log(''); 
+    }
+
+       
+    }
+
+findPrimesInRange(1, 5);
