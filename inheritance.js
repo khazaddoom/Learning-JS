@@ -62,23 +62,39 @@
 // console.log(suvodipJudwa.yearOfBirth);
 
 
-function findPrimesInRange (x, y) {
+// function findPrimesInRange (x, y) {
 
-    for (let i = x; i <= y; i++) {
+//     for (let i = x; i <= y; i++) {
 
-        var divisionCount = 0;
+//         var divisionCount = 0;
         
-        for (let j = 1; j <=i; j++) {
+//         for (let j = 1; j <=i; j++) {
 
-            if (i % j === 0) {
-                divisionCount++;
-            }
-        }              
-        //console log if prime
-        (divisionCount <= 2)? console.log(i) : console.log(''); 
-    }
+//             if (i % j === 0) {
+//                 divisionCount++;
+//             }
+//         }              
+//         //console log if prime
+//         (divisionCount <= 2)? console.log(i) : console.log(''); 
+//     }
 
        
-    }
+//     }
 
-findPrimesInRange(1, 5);
+// findPrimesInRange(1, 5);
+
+
+function interviewQuestion(job) {
+
+    return function(name) {
+        if (job == 'designer') {
+            console.log(name + ', can you please explain what UX Design is?');           
+        } else if (job == 'teacher') {
+            console.log('What subject do you teach? ' + name );           
+        }
+    };
+
+}
+
+interviewQuestion('teacher')('John');
+interviewQuestion('designer')('Ganesh');
