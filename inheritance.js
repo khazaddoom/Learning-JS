@@ -84,17 +84,24 @@
 // findPrimesInRange(1, 5);
 
 
-function interviewQuestion(job) {
+// function interviewQuestion(job) {
 
-    return function(name) {
-        if (job == 'designer') {
-            console.log(name + ', can you please explain what UX Design is?');           
-        } else if (job == 'teacher') {
-            console.log('What subject do you teach? ' + name );           
-        }
-    };
+//     return function(name) {
+//         if (job == 'designer') {
+//             console.log(name + ', can you please explain what UX Design is?');           
+//         } else if (job == 'teacher') {
+//             console.log('What subject do you teach? ' + name );           
+//         }
+//     };
 
+// }
+
+// interviewQuestion('teacher')('John');
+// interviewQuestion('designer')('Ganesh');
+
+function testing() {
+    return 
+    'hello';
 }
 
-interviewQuestion('teacher')('John');
-interviewQuestion('designer')('Ganesh');
+console.log(testing());
