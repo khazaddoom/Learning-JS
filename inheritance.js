@@ -99,9 +99,16 @@
 // interviewQuestion('teacher')('John');
 // interviewQuestion('designer')('Ganesh');
 
-function testing() {
-    return 
-    'hello';
+// function testing() {
+//     return 
+//     'hello';
+// }
+
+// console.log(testing());
+
+function sayHello() {
+    var name = 'Ganesh';
+    console.log("Hello Mr. " + name);
 }
 
-console.log(testing());
+console.log(name);

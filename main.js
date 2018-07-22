@@ -113,3 +113,26 @@
 
 // person.calculateAge();
 
+
+var reshma = {
+
+    name: 'Reshma',
+    sex: 'female',
+    age: 28,
+    job: 'bank officer',
+    presentation: function() {
+        console.log('Hello I am ' + this.name + ', ' + this.age + ' years old ' + this.sex + ' working as a ' + this.job);
+    } 
+
+}
+
+var Ganesh = {
+    name: 'Ganesh',
+    sex: 'Male',
+    age: 31,
+    job: 'Mendix Architect'
+}
+
+reshma.presentation.call(Ganesh);
+reshma.presentation();
+
