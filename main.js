@@ -120,9 +120,16 @@ var reshma = {
     sex: 'female',
     age: 28,
     job: 'bank officer',
+    maritalstatus: 'single',
     presentation: function() {
         console.log('Hello I am ' + this.name + ', ' + this.age + ' years old ' + this.sex + ' working as a ' + this.job);
-    } 
+    },
+    isMarried : function() {
+        if(this.maritalstatus === 'single') 
+            console.log('False');
+        else if(this.maritalstatus === 'married') 
+            console.log('True');
+    }
 
 }
 
@@ -130,9 +137,8 @@ var Ganesh = {
     name: 'Ganesh',
     sex: 'Male',
     age: 31,
-    job: 'Mendix Architect'
+    job: 'Mendix Architect',
+    maritalstatus: 'married',
 }
 
-reshma.presentation.call(Ganesh);
-reshma.presentation();
-
+reshma.isMarried.call(Ganesh);
