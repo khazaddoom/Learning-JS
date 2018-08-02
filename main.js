@@ -114,31 +114,78 @@
 // person.calculateAge();
 
 
-var reshma = {
+// var reshma = {
 
-    name: 'Reshma',
-    sex: 'female',
-    age: 28,
-    job: 'bank officer',
-    maritalstatus: 'single',
-    presentation: function() {
-        console.log('Hello I am ' + this.name + ', ' + this.age + ' years old ' + this.sex + ' working as a ' + this.job);
-    },
-    isMarried : function() {
-        if(this.maritalstatus === 'single') 
-            console.log(this.name + ' is not married!');
-        else if(this.maritalstatus === 'married') 
-            console.log(this.name + ' is married!');
+//     name: 'Reshma',
+//     sex: 'female',
+//     age: 28,
+//     job: 'bank officer',
+//     maritalstatus: 'single',
+//     presentation: function() {
+//         console.log('Hello I am ' + this.name + ', ' + this.age + ' years old ' + this.sex + ' working as a ' + this.job);
+//     },
+//     isMarried : function() {
+//         if(this.maritalstatus === 'single') 
+//             console.log(this.name + ' is not married!');
+//         else if(this.maritalstatus === 'married') 
+//             console.log(this.name + ' is married!');
+//     }
+
+// }
+
+// var Ganesh = {
+//     name: 'Ganesh',
+//     sex: 'Male',
+//     age: 31,
+//     job: 'Mendix Architect',
+//     maritalstatus: 'single',
+// }
+
+// reshma.isMarried.call(Ganesh);
+
+var years = [1998, 2001, 2009, 1986, 1982, 1978];
+
+
+
+function calculateAge(yearOfBirth) {
+    return 2018 - yearOfBirth;
+}
+
+function eligibleForVoting(ageLimit, age) {
+
+    return age >= ageLimit;
+
+}
+
+
+function arrayCalc(arr, fn) {
+
+    var ages = [];
+
+    for(var i=0; i< arr.length; i++) {
+
+        ages.push(fn(arr[i]));
+    
     }
 
+    return ages;
+
 }
 
-var Ganesh = {
-    name: 'Ganesh',
-    sex: 'Male',
-    age: 31,
-    job: 'Mendix Architect',
-    maritalstatus: 'single',
-}
 
-reshma.isMarried.call(Ganesh);
+var ages = arrayCalc(years, calculateAge);
+
+// for(var i= 0; i < ages.length; i++) {
+
+//     console.log(isFullAge(18, ages[i]));
+
+// }
+console.log(ages);
+
+var votingEligibilityIndia = arrayCalc(ages, eligibleForVoting.bind(this, 18));
+
+console.log(votingEligibilityIndia);
+
+var votingEligibilityChina = arrayCalc(ages, eligibleForVoting.bind(this, 7));
+
+console.log(votingEligibilityChina);
