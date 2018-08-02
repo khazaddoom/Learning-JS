@@ -126,9 +126,9 @@ var reshma = {
     },
     isMarried : function() {
         if(this.maritalstatus === 'single') 
-            console.log('False');
+            console.log(this.name + ' is not married!');
         else if(this.maritalstatus === 'married') 
-            console.log('True');
+            console.log(this.name + ' is married!');
     }
 
 }
@@ -138,7 +138,7 @@ var Ganesh = {
     sex: 'Male',
     age: 31,
     job: 'Mendix Architect',
-    maritalstatus: 'married',
+    maritalstatus: 'single',
 }
 
 reshma.isMarried.call(Ganesh);
