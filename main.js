@@ -114,31 +114,46 @@
 // person.calculateAge();
 
 
-var reshma = {
+// var reshma = {
 
-    name: 'Reshma',
-    sex: 'female',
-    age: 28,
-    job: 'bank officer',
-    maritalstatus: 'single',
-    presentation: function() {
-        console.log('Hello I am ' + this.name + ', ' + this.age + ' years old ' + this.sex + ' working as a ' + this.job);
-    },
-    isMarried : function() {
-        if(this.maritalstatus === 'single') 
-            console.log('False');
-        else if(this.maritalstatus === 'married') 
-            console.log('True');
-    }
+//     name: 'Reshma',
+//     sex: 'female',
+//     age: 28,
+//     job: 'bank officer',
+//     maritalstatus: 'single',
+//     presentation: function() {
+//         console.log('Hello I am ' + this.name + ', ' + this.age + ' years old ' + this.sex + ' working as a ' + this.job);
+//     },
+//     isMarried : function() {
+//         if(this.maritalstatus === 'single') 
+//             console.log('False');
+//         else if(this.maritalstatus === 'married') 
+//             console.log('True');
+//     }
 
-}
+// }
 
-var Ganesh = {
+// var Ganesh = {
+//     name: 'Ganesh',
+//     sex: 'Male',
+//     age: 31,
+//     job: 'Mendix Architect',
+//     maritalstatus: 'married',
+// }
+
+// reshma.isMarried.call(Ganesh);
+
+
+var Person = {
+
     name: 'Ganesh',
-    sex: 'Male',
-    age: 31,
-    job: 'Mendix Architect',
-    maritalstatus: 'married',
+    yearOfBirth: 1986
+
 }
 
-reshma.isMarried.call(Ganesh);
+Person.calculateAge = function() {
+    return 2018 - this.yearOfBirth;
+}
+
+
+console.log(Person.calculateAge());
